@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -7,9 +7,11 @@ const Navigate = () => {
   const [data, setData] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
   const [relatedItems, setRelatedItems] = useState([]);
-  const { id } = useParams();
 
   const navi = useNavigate();
+  const { id } = useParams();
+  const idRef = useRef(id); // Use a ref for 'id'
+
   useEffect(() => {
     axios
       .get("https://react-blog-api-w9jg.onrender.com/Api/Navigate")
@@ -19,7 +21,7 @@ const Navigate = () => {
 
   useEffect(() => {
     if (data.length > 0) {
-      const itemId = parseInt(id);
+      const itemId = parseInt(idRef.current); // Access 'id' from the ref
       const selectedItem = data.find((item) => item.id === itemId);
       setSelectedItem(selectedItem);
       if (selectedItem) {
@@ -35,7 +37,6 @@ const Navigate = () => {
       }
     }
   }, [data]);
-
   return (
     <div>
       <div className="ParentTop">
