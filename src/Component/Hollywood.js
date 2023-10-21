@@ -1,9 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 const Hollywood = () => {
-  // const [Data] = useContext(Store);
-  // console.log(Data);
   const [data, setData] = useState([]);
 
   useEffect(() => {
