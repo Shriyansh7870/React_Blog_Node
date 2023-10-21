@@ -15,7 +15,7 @@ const Navigate = () => {
       .get("https://react-blog-api-w9jg.onrender.com/Api/Navigate")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
-  }, [id]);
+  });
 
   useEffect(() => {
     if (data.length > 0) {
