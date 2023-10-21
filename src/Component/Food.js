@@ -1,12 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 const Food = () => {
-  // const [Data] = useContext(Store);
-
-  // console.log(Data);
   const [data, setData] = useState([]);
-
   useEffect(() => {
     axios
       .get("https://react-blog-api-w9jg.onrender.com/Api/Food")
