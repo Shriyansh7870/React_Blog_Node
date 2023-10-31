@@ -63,7 +63,7 @@ const Home = () => {
       <div className="Adver">
         <div className="Articlelist ">
           {data
-            .filter((item) => item.id >= 12 && item.id <= 18)
+            .filter((item) => item.id >= 10 && item.id <= 16)
             .map((item, index) => {
               return (
                 <div key={index}>
@@ -106,7 +106,7 @@ const Home = () => {
                         />
                         <div className="text2">
                           <h3>{item.name.slice(0, 20)}..</h3>
-                          <p>{item.text.slice(0, 140)}..</p>
+                          <p>{item.text.slice(0, 80)}..</p>
                         </div>
 
                         <div className="number">

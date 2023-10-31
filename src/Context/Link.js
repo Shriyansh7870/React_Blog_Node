@@ -114,6 +114,7 @@ const NavBar = () => {
             <div className="icons">
               <h2>
                 <a
+                  className="iconsnew"
                   href="https://www.instagram.com/shriyansh7870/"
                   rel="noreferrer"
                   target="_blank"
@@ -124,6 +125,7 @@ const NavBar = () => {
               </h2>
               <h2>
                 <a
+                  className="iconsnew"
                   href="https://github.com/Shriyansh7870"
                   target="_blank"
                   rel="noreferrer"
@@ -133,6 +135,7 @@ const NavBar = () => {
               </h2>
               <h2>
                 <a
+                  className="iconsnew"
                   href="https://www.linkedin.com/in/shri7870/"
                   target="_blank"
                   rel="noreferrer"
