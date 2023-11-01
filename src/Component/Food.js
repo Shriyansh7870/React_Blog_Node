@@ -17,7 +17,7 @@ const Food = () => {
         <div className="Adver">
           <div className="Articlelist">
             {data
-              .filter((item) => item.id >= 57 && item.id <= 64)
+              .filter((item) => item.id >= 57 && item.id <= 63)
               .map((item, index) => (
                 <div key={index}>
                   <NavLink to={`/Navigate/${item.id}`}>
